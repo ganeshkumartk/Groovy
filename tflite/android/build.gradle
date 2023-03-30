@@ -1,0 +1,44 @@
+group 'sq.flutter.tflite'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    dependencies {
+        implementation 'org.tensorflow:tensorflow-lite:+'
+        implementation 'org.tensorflow:tensorflow-lite-gpu:+'
+        // Tensorflow lite dependencies
+        implementation 'org.tensorflow:tensorflow-lite-task-vision:0.4.0'
+        // Import the GPU delegate plugin Library for GPU inference
+        implementation 'org.tensorflow:tensorflow-lite-gpu:2.9.0'
+        implementation 'org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0'
+    }
+}

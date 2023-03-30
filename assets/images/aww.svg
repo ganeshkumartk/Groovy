@@ -1,0 +1,15 @@
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12.5" cy="12.5" r="12.5" fill="#ECDAFF"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+<circle cx="12.5" cy="12.5" r="12.5" fill="#ECDAFF"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M25.099 5.79926L29.7008 10.0376L19.6514 20.0207L25.099 5.79926Z" fill="#9A9D9E"/>
+<path d="M15.9664 5L12.8638 24.6421L34.5931 24.6446L32.8079 14.6565L15.9664 5Z" fill="#C7CCCE"/>
+<path d="M15.9666 5L13.5675 6.16762L7.62012 15.7431L13.9764 17.5983L15.9666 5Z" fill="#D5DBDD"/>
+<path d="M7.62035 15.7432L4.10889 7.14868L6.12736 7.32548L10.6861 10.8075L7.62035 15.7432Z" fill="#E1E9EB"/>
+<path d="M4.10728 7.16333L3.20117 9.12042L5.00233 9.33528L4.10728 7.16333Z" fill="#C7CCCE"/>
+<path d="M15.9664 5L25.0987 5.79929L19.651 20.0207L13.8682 18.2859L15.9664 5Z" fill="#E1E9EB"/>
+<path d="M25.099 5.79926L28.9592 9.85094L19.6514 20.0207L25.099 5.79926Z" fill="#D5DBDD"/>
+</g>
+</svg>
