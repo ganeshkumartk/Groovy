@@ -129,11 +129,11 @@ class _FitMainScreenViewState extends State<FitMainScreenView> {
                                     ),
                                   ),
                                   const SizedBox(width: 25),
-                                  Column(
+                                  const Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
-                                    children: const [
+                                    children: [
                                       Text(
                                         'Free Trial',
                                         style: TextStyle(
@@ -202,13 +202,13 @@ class _FitMainScreenViewState extends State<FitMainScreenView> {
                                     ),
                                   ),
                                   const SizedBox(width: 25),
-                                  Column(
+                                  const Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: const [
+                                    children: [
                                       Text(
                                         'Monthly',
                                         style: TextStyle(
@@ -277,13 +277,13 @@ class _FitMainScreenViewState extends State<FitMainScreenView> {
                                     ),
                                   ),
                                   const SizedBox(width: 25),
-                                  Column(
+                                  const Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: const [
+                                    children: [
                                       Text(
                                         'Annual',
                                         style: TextStyle(

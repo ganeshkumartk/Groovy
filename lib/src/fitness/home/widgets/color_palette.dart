@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:image/image.dart' as imageLib;
+import 'package:image/image.dart' as imagelib;
 
 const String keyPalette = 'palette';
 const String keyNoOfItems = 'noIfItems';
@@ -64,7 +64,7 @@ List<Color> extractPixelsColors(Uint8List? bytes) {
   List<Color> colors = [];
 
   var values = bytes!.buffer.asUint8List();
-  imageLib.Image? image = imageLib.decodeImage(values);
+  imagelib.Image? image = imagelib.decodeImage(values);
 
   List pixels = [];
 

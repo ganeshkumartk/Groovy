@@ -26,9 +26,7 @@ class GroovyDashboardScreenView extends StatefulWidget {
 }
 
 class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
-  late File _image;
   List? _recognitions;
-  final String _model = "MobileNet";
   List<Color> colors = [];
   List<Color> sortedColors = [];
   List<Color> palette = [];
@@ -53,12 +51,12 @@ class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
   }
 
   Future predictImage(File image) async {
+    // ignore: unnecessary_null_comparison
     if (image == null) return;
 
     await recognizeImage(image);
 
     setState(() {
-      _image = image;
     });
   }
 
@@ -93,12 +91,6 @@ class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
   Future loadModel() async {
     Tflite.close();
     try {
-      String? res;
-      res = await Tflite.loadModel(
-        model: 'assets/models/model.tflite',
-        labels: 'assets/models/labels.txt',
-        useGpuDelegate: false,
-      );
     } on PlatformException {
       debugPrint('Failed to load model.');
     }
@@ -146,12 +138,16 @@ class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
     );
     extractColors(image);
     setState(() {
-      print(recognitions);
+      if (kDebugMode) {
+        print(recognitions);
+      }
       _recognitions = recognitions!;
       playMusic(recognitions[0]["label"]);
     });
     int endTime = DateTime.now().millisecondsSinceEpoch;
-    print("Inference took ${endTime - startTime}ms");
+    if (kDebugMode) {
+      print("Inference took ${endTime - startTime}ms");
+    }
   }
 
 
@@ -211,8 +207,8 @@ class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 64,
-        title: Column(
-          children: const [
+        title: const Column(
+          children: [
             Text(
               'Groovy',
               style: TextStyle(fontSize: 40),
@@ -271,12 +267,12 @@ class _GroovyDashboardScreenViewState extends State<GroovyDashboardScreenView> {
             ),
             Container(
               color: Colors.white.withOpacity(0.5),
-              padding: EdgeInsets.only(top: 6, bottom: 16),
+              padding: const EdgeInsets.only(top: 6, bottom: 16),
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  Text('Palette of the Scene'),
-                  SizedBox(height: 10),
+                  const Text('Palette of the Scene'),
+                  const SizedBox(height: 10),
                   _getPalette()
                 ],
               ),

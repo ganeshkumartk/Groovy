@@ -193,8 +193,8 @@ class _FitSetPwdScreenViewState extends State<FitSetPwdScreenView> {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 32.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,7 +203,7 @@ class _FitSetPwdScreenViewState extends State<FitSetPwdScreenView> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   Text(
                                     '• 8+ characters',
                                     style: TextStyle(
@@ -226,7 +226,7 @@ class _FitSetPwdScreenViewState extends State<FitSetPwdScreenView> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   Text(
                                     '• 1 uppercase',
                                     style: TextStyle(
